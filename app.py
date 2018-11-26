@@ -21,14 +21,14 @@ def getNews():
 
 @ask.launch
 def launch():
-    fact = getfact()
+    fact = getNews()
     response = fact + '...........Do you want more?'
     return question(response)
 
 
 @ask.intent('YesIntent')
 def yesIntent():
-    fact = getfact()
+    fact = getNews()
     response = fact + '...........Do you want more?'
     return question(response)
 
