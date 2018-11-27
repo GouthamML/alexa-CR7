@@ -16,6 +16,7 @@ def homepage():
 def getNews():
     news = requests.get('https://facts-response.herokuapp.com/getNews').content
     news = json.loads(news)
+    print random.choice(news)
     return random.choice(news)
 
 
